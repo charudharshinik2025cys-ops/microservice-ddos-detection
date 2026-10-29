@@ -1,0 +1,36 @@
+{
+  "services": [
+    "gateway",
+    "users",
+    "catalog",
+    "orders",
+    "payments",
+    "inventory"
+  ],
+  "edges": [
+    [
+      "gateway",
+      "users"
+    ],
+    [
+      "gateway",
+      "catalog"
+    ],
+    [
+      "gateway",
+      "orders"
+    ],
+    [
+      "catalog",
+      "inventory"
+    ],
+    [
+      "orders",
+      "payments"
+    ],
+    [
+      "orders",
+      "inventory"
+    ]
+  ]
+}

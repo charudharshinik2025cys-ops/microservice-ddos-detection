@@ -1,0 +1,187 @@
+{
+  "data_notice": "All data and results are synthetic simulation outputs; they do not establish real-world attack performance.",
+  "split": "complete scenarios; preprocessing fitted on training scenarios only",
+  "class_names": [
+    "normal",
+    "directly_targeted",
+    "indirectly_affected"
+  ],
+  "models": {
+    "gcn": {
+      "per_class": {
+        "normal": {
+          "precision": 0.9916798732171157,
+          "recall": 1.0,
+          "f1": 0.9958225581857967,
+          "support": 2503
+        },
+        "directly_targeted": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 28
+        },
+        "indirectly_affected": {
+          "precision": 0.8333333333333334,
+          "recall": 0.819672131147541,
+          "f1": 0.8264462809917356,
+          "support": 61
+        }
+      },
+      "confusion_matrix": [
+        [
+          2503,
+          0,
+          0
+        ],
+        [
+          18,
+          0,
+          10
+        ],
+        [
+          3,
+          8,
+          50
+        ]
+      ],
+      "false_positive_rate_normal": 0.0,
+      "false_positive_rate_legitimate_spike": 0.0,
+      "target_service_localization_accuracy": 0.0,
+      "mean_detection_delay_windows": null,
+      "detection_delay_definition": "First attack window where the true target is predicted directly_targeted, minus attack start window; missed targets are omitted."
+    },
+    "random_forest": {
+      "per_class": {
+        "normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2503
+        },
+        "directly_targeted": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 28
+        },
+        "indirectly_affected": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 61
+        }
+      },
+      "confusion_matrix": [
+        [
+          2503,
+          0,
+          0
+        ],
+        [
+          0,
+          28,
+          0
+        ],
+        [
+          0,
+          0,
+          61
+        ]
+      ],
+      "false_positive_rate_normal": 0.0,
+      "false_positive_rate_legitimate_spike": 0.0,
+      "target_service_localization_accuracy": 1.0,
+      "mean_detection_delay_windows": 0.0,
+      "detection_delay_definition": "First attack window where the true target is predicted directly_targeted, minus attack start window; missed targets are omitted."
+    },
+    "threshold": {
+      "per_class": {
+        "normal": {
+          "precision": 0.9770841564598973,
+          "recall": 0.9880143827407112,
+          "f1": 0.9825188716726262,
+          "support": 2503
+        },
+        "directly_targeted": {
+          "precision": 0.45901639344262296,
+          "recall": 1.0,
+          "f1": 0.6292134831460674,
+          "support": 28
+        },
+        "indirectly_affected": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 61
+        }
+      },
+      "confusion_matrix": [
+        [
+          2473,
+          30,
+          0
+        ],
+        [
+          0,
+          28,
+          0
+        ],
+        [
+          58,
+          3,
+          0
+        ]
+      ],
+      "false_positive_rate_normal": 0.0,
+      "false_positive_rate_legitimate_spike": 0.034722222222222224,
+      "target_service_localization_accuracy": 1.0,
+      "mean_detection_delay_windows": 0.0,
+      "detection_delay_definition": "First attack window where the true target is predicted directly_targeted, minus attack start window; missed targets are omitted."
+    },
+    "gcn_without_edges": {
+      "per_class": {
+        "normal": {
+          "precision": 0.9948330683624801,
+          "recall": 1.0,
+          "f1": 0.9974098425981271,
+          "support": 2503
+        },
+        "directly_targeted": {
+          "precision": 0.12903225806451613,
+          "recall": 0.14285714285714285,
+          "f1": 0.13559322033898305,
+          "support": 28
+        },
+        "indirectly_affected": {
+          "precision": 0.4666666666666667,
+          "recall": 0.3442622950819672,
+          "f1": 0.39622641509433965,
+          "support": 61
+        }
+      },
+      "confusion_matrix": [
+        [
+          2503,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          24
+        ],
+        [
+          13,
+          27,
+          21
+        ]
+      ],
+      "false_positive_rate_normal": 0.0,
+      "false_positive_rate_legitimate_spike": 0.0,
+      "target_service_localization_accuracy": 0.16666666666666666,
+      "mean_detection_delay_windows": 1.6666666666666667,
+      "detection_delay_definition": "First attack window where the true target is predicted directly_targeted, minus attack start window; missed targets are omitted."
+    }
+  }
+}

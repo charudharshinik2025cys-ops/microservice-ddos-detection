@@ -1,0 +1,104 @@
+{
+  "detected": true,
+  "target_service": "payments",
+  "flagged_services": [
+    "payments"
+  ],
+  "affected_services": [],
+  "services": [
+    {
+      "service": "gateway",
+      "prediction": "normal"
+    },
+    {
+      "service": "users",
+      "prediction": "normal"
+    },
+    {
+      "service": "catalog",
+      "prediction": "normal"
+    },
+    {
+      "service": "orders",
+      "prediction": "normal"
+    },
+    {
+      "service": "payments",
+      "prediction": "directly_targeted"
+    },
+    {
+      "service": "inventory",
+      "prediction": "normal"
+    }
+  ],
+  "time": "2026-10-14 14:53:17 India Standard Time",
+  "notice": "Synthetic local simulation; no attack traffic was sent.",
+  "telemetry": [
+    {
+      "service": "gateway",
+      "request_rate": 151.55548523421598,
+      "avg_latency_ms": 75.71613597748197,
+      "error_rate": 0.012,
+      "timeout_rate": 0.004,
+      "cpu_percent": 29.30701111105635,
+      "memory_percent": 44.42976612261169,
+      "known_simulation_label": "normal",
+      "model_prediction": "normal"
+    },
+    {
+      "service": "users",
+      "request_rate": 96.13458965510802,
+      "avg_latency_ms": 79.05269557311387,
+      "error_rate": 0.012,
+      "timeout_rate": 0.004,
+      "cpu_percent": 26.483317665117077,
+      "memory_percent": 39.78025101813432,
+      "known_simulation_label": "normal",
+      "model_prediction": "normal"
+    },
+    {
+      "service": "catalog",
+      "request_rate": 92.74958082086361,
+      "avg_latency_ms": 71.41628343315804,
+      "error_rate": 0.012,
+      "timeout_rate": 0.004,
+      "cpu_percent": 31.3089394619963,
+      "memory_percent": 42.819581631541105,
+      "known_simulation_label": "normal",
+      "model_prediction": "normal"
+    },
+    {
+      "service": "orders",
+      "request_rate": 84.79072164069659,
+      "avg_latency_ms": 76.87407683988812,
+      "error_rate": 0.012,
+      "timeout_rate": 0.004,
+      "cpu_percent": 30.83672189921785,
+      "memory_percent": 42.69544686046887,
+      "known_simulation_label": "normal",
+      "model_prediction": "normal"
+    },
+    {
+      "service": "payments",
+      "request_rate": 617.2569391441015,
+      "avg_latency_ms": 283.42462608894425,
+      "error_rate": 0.24748928400352704,
+      "timeout_rate": 0.10569518767768521,
+      "cpu_percent": 89.33075529432371,
+      "memory_percent": 45.96433343115032,
+      "known_simulation_label": "directly_targeted",
+      "model_prediction": "directly_targeted"
+    },
+    {
+      "service": "inventory",
+      "request_rate": 95.77368641869377,
+      "avg_latency_ms": 69.12385078165502,
+      "error_rate": 0.012,
+      "timeout_rate": 0.004,
+      "cpu_percent": 26.312897424462268,
+      "memory_percent": 44.684227559433786,
+      "known_simulation_label": "normal",
+      "model_prediction": "normal"
+    }
+  ]
+}

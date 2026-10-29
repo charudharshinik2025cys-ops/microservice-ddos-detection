@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "scenarios": 60,
+  "windows_per_scenario": 24,
+  "services": ["gateway", "users", "catalog", "orders", "payments", "inventory"],
+  "edges": [["gateway", "users"], ["gateway", "catalog"], ["gateway", "orders"], ["catalog", "inventory"], ["orders", "payments"], ["orders", "inventory"]],
+  "epochs": 220,
+  "learning_rate": 0.025,
+  "hidden_units": 16
+}
